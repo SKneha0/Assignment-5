@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Resume Form</h2>
+        <form id="resumeForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" required><br>
+
+            <label for="education">Education:</label>
+            <input type="text" id="education" required><br>
+
+            <label for="workExperience">Work Experience:</label>
+            <input type="text" id="workExperience" required><br>
+
+            <label for="skills">Skills:</label>
+            <input type="text" id="skills" required><br>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+
+        <h2>Generated Resume</h2>
+        <div id="editableResume" style="display: none;">
+            <h1 contenteditable="true" id="displayName"></h1>
+            <div contenteditable="true" id="displayEducation">
+                <h3>Education</h3>
+                <p></p>
+            </div>
+            <div contenteditable="true" id="displayWorkExperience">
+                <h3>Work Experience</h3>
+                <p></p>
+            </div>
+            <div contenteditable="true" id="displaySkills">
+                <h3>Skills</h3>
+                <p></p>
+            </div>
+
+            <!-- Sharing and Download Buttons -->
+            <div id="resumeActions">
+                <button id="shareLink">Copy Shareable Link</button>
+                <button id="downloadPdf">Download Resume as PDF</button>
+            </div>
+        </div>
+
+        <p id="shareMessage" style="display: none;">Link copied to clipboard!</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
